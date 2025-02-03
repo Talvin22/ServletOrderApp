@@ -1,12 +1,14 @@
 package repository;
 
+import java.util.Optional;
+
 public interface BaseRepository<T> {
 
     void create(T obj);
 
-    T getById(Long id);
+    Optional<T> getById(Long id);
 
-    T update(T obj);
+    T update(Long id, T obj);
 
     void delete(Long id);
 
