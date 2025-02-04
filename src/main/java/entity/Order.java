@@ -16,7 +16,7 @@ public class Order {
     private Date date;
     @Column(name = "cost", nullable = false)
     private Double cost;
-    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Product> products;
     public Order() {}
     public Order(Long id, Date date, Double cost, List<Product> products) {
